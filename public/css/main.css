@@ -1,0 +1,32 @@
+/* NAVBAR & FOOTER */
+.py-1{
+    background-color: #00243F;
+    font-family: Roboto;
+    font-size: 13px;
+    color: white;
+
+}
+
+.navbar {
+    background-color: #073C64;
+    font-family: Roboto;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-link {
+    font-size: 15px;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+
+}
