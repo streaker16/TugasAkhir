@@ -21,6 +21,5 @@ Route::get('/', function () {
     return view('user.home');
 });
 
-Route::get('/contact', function () {
-    return view('user/contact');
-});
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');

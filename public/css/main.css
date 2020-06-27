@@ -1,8 +1,13 @@
+/* my color class */
+.bg-kkn{
+    background-color: #073C64 !important;
+}
+
 /* NAVBAR & FOOTER */
 .py-1{
     background-color: #00243F;
     font-family: Roboto;
-    font-size: 13px;
+    font-size: 12px;
     color: white;
 
 }
@@ -23,10 +28,141 @@
 }
 
 .nav-link {
-    font-size: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-left: 15px;
+}
+#footer {
+    background-color: #2C2C2C;
+    font-size: 18px;
+    line-height: 21px;
 }
 
-/* DESKTOP VERSION */
-@media (min-width: 992px) {
 
+/* about */
+.jumbotron {
+    background-image: url(../img/about.png);
+    background-size: cover;
+    height: 358px;
+    position: relative;
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0) );
+}
+
+.jumbotron .display-4{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 210px;
+    font-family: Quicksand;
+    font-size: 65px;
+    font-weight: unset;
+    position: relative;
+    z-index: 1;
+}
+
+.about.container{
+    margin-bottom: 70px;
+    margin-top: 60px;
+}
+
+.about .col-sm-8{
+    color: white;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10;
+    padding-right: 10;
+    text-align: center;
+    font-family: Quicksand;
+}
+
+.about h5{
+    font-size: 20px;
+    font-weight: unset;
+}
+
+h5::after {
+    content: '';
+    display: block;
+    border: 2px solid #FFB200;
+    width: 133px;
+    margin: auto;
+    margin-top: 10px;
+}
+/* end about */
+
+/* contact */
+#contact-section {
+    background-color: #073C64;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+.contact{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+.contact .col-sm-8{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    border-radius: 30px;
+}
+
+#contact-section .text-right{
+    font-family: Biryani;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 44px;
+color: #FFB200;
+}
+
+#contact-section .pl-1{
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin-top: -10px;
+}
+
+#contact-section .pl-1 a{
+    color: white;
+}
+
+#contact-section .text-right{
+    margin-top: -10px;
+}
+/* end contact */
+
+/* DESKTOP VERSION */
+@media (max-width: 576px) {
+    #contact-section.pl-1{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 22px;
+    }
 }
