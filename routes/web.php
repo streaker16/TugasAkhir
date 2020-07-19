@@ -21,5 +21,15 @@ Route::get('/', function () {
     return view('user.home');
 });
 
+Route::get('/produk', function () {
+    return view('user.produk');
+});
+Route::get('/produk/detailproduk', function () {
+    return view('user.detailproduk');
+});
+
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/laporan', 'LaporanController@index');
+Route::get('/laporan    /detaillaporan', 'LaporanController@show');
+Route::get('/gallery', 'galleryController@index');

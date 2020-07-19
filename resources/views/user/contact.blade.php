@@ -55,7 +55,7 @@
                     <a class="nav-item nav-link" href="{{ url('/about') }}">About</a>
                     <a class="nav-item nav-link" href="{{ url('/produk') }}">Produk</a>
                     <a class="nav-item nav-link" href="{{ url('/laporan') }}">Laporan</a>
-                    <a class="nav-item nav-link" href="{{ url('/galery') }}">Galery</a>
+                    <a class="nav-item nav-link" href="{{ url('/gallery') }}">Galery</a>
                     <a class="nav-item nav-link" href="{{ url('/contact') }}">Contact</a>
                 </div>
             </div>
@@ -64,7 +64,7 @@
 
     @yield('container')
 
-    <div class="container contact bg-white py-4" id="contact-section">
+    <div class="container contact bg-white py-4 my-5" id="contact-section">
         <div class="row justify-content-center py-4">
             <div class="col-sm-8 bg-kkn">
                 <h2 class="text-center py-3">Contact Us</h2>
@@ -78,9 +78,10 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light" id="footer">
-        <div class="container py-3 px-5">
-            <img src="img/logofooter.png">
+    <nav class="navbar navbar-expand-lg" id="footer">
+        <div class="container px-5">
+            <img src="img/logofooter.png" width="9%" height="9%">
+            <p> &copy; copyright 2020 | build with <i class="fas fa-heart"></i> by. KKN UGM</p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
