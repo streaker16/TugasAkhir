@@ -55,8 +55,9 @@
                     <a class="nav-item nav-link" href="{{ url('/about') }}">About</a>
                     <a class="nav-item nav-link" href="{{ url('/produk') }}">Produk</a>
                     <a class="nav-item nav-link" href="{{ url('/laporan') }}">Laporan</a>
-                    <a class="nav-item nav-link" href="{{ url('/gallery') }}">Galery</a>
+                    <a class="nav-item nav-link" href="{{ url('/gallery') }}">Gallery</a>
                     <a class="nav-item nav-link" href="{{ url('/contact') }}">Contact</a>
+                    <a class="nav-item btn btn-primary tombol" href="#">Join Us</a>
                 </div>
             </div>
         </div>

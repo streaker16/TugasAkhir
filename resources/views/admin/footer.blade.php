@@ -1,7 +1,3 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.5
-    </div>
+    <strong> &copy; Copyright 2020 | build with <i class="fas fa-heart" style="color: salmon"></i> by <a href="#">KKN Real UGM</a>.</strong>
   </footer>

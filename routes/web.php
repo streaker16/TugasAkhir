@@ -13,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route Admin
 Route::get('/admin', function () {
-    return view('admin/default');
+    return view('admin/content');
+});
+Route::get('/admin/gallery', function () {
+    return view('admin/gallery');
 });
 
+
+
+// Route User
 Route::get('/', function () {
     return view('user.home');
 });
@@ -27,9 +34,12 @@ Route::get('/produk', function () {
 Route::get('/produk/detailproduk', function () {
     return view('user.detailproduk');
 });
+Route::get('/document', function () {
+    return view('user.document');
+});
 
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
-Route::get('/laporan', 'LaporanController@index');
-Route::get('/laporan    /detaillaporan', 'LaporanController@show');
+Route::get('/news', 'NewsController@index');
+Route::get('/news/detailnews', 'NewsController@show');
 Route::get('/gallery', 'galleryController@index');
