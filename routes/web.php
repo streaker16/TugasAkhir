@@ -20,6 +20,15 @@ Route::get('/admin', function () {
 Route::get('/admin/gallery', function () {
     return view('admin/gallery');
 });
+Route::get('/admin/produk', function () {
+    return view('admin/produk');
+});
+Route::get('/admin/news', function () {
+    return view('admin/news');
+});
+Route::get('/admin/document', function () {
+    return view('admin/document');
+});
 
 
 

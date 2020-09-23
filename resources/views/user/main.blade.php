@@ -59,7 +59,7 @@
                     <a class="nav-item nav-link" href="{{ url('/document') }}">Document</a>
                     <a class="nav-item nav-link" href="{{ url('/gallery') }}">Gallery</a>
                     <a class="nav-item nav-link" href="{{ url('/contact') }}">Contact</a>
-                    <a class="nav-item btn btn-primary tombol" href="#">Join Us</a>
+                <a class="nav-item btn btn-primary tombol" href="{{ url('/admin') }}">Join Us</a>
                 </div>
             </div>
         </div>
