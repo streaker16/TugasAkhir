@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+use App\Produk;
+
+class AdminProdukController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +15,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $gallerys = \DB::table('gallerys')->get();
+        $produks = \DB::table('produks')->get();
 
-        return view('user/gallery', ['gallerys' => $gallerys]);
+        return view('admin/produk', ['produks' => $produks]);
     }
 
     /**
@@ -36,7 +38,24 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = $request->file('file');
+
+        $file->move('img/produk',$file->getClientOriginalName());
+
+        $nama = $request->nama;
+        $kota = $request->kota;
+        $deskripsi = $request->deskripsi;
+        $gambar = $file->getClientOriginalName();
+
+        Produk::create([
+            'nama' => $nama,
+            'kota' => $kota,
+            'deskripsi' => $deskripsi,
+            'gambar' => $gambar,
+            'user_id' => 1,
+        ]);
+
+        return redirect()->back();
     }
 
     /**

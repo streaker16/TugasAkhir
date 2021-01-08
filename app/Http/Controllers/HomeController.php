@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,12 @@ class GalleryController extends Controller
      */
     public function index()
     {
+
+        $news = \DB::table('news')->get();
+        $produks = \DB::table('produks')->get();
         $gallerys = \DB::table('gallerys')->get();
 
-        return view('user/gallery', ['gallerys' => $gallerys]);
+        return view('user/home', ['news' => $news, 'produks' => $produks, 'gallerys' => $gallerys]);
     }
 
     /**

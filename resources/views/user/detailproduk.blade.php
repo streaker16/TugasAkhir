@@ -8,8 +8,12 @@
                 <img src="../img/produk/produkdetail.png" class="img-fluid" alt="image detail produk">
             </div>
             <div class="col-sm-6 pl-5">
-                <h2 class="bg-kkn">Bakpia</h2>
-                <p>Merupakan makanan khas asal Yogya yang sudah lama ada dan masih eksis sampai sekarang ini. Biasanya bakpia berisikan dengan isian kacang hijau, namun kini sudah makin bervariasi. Bakpia ini mudah didapatkan, jadi kawan - kawan tidak akan kesusahan apabila ingin mencoba jajanan khas asal Yogya yang satu ini.</p>
+                @foreach ($produks as $produk)
+
+                <h2 class="bg-kkn">{{$produk->nama}}</h2>
+                <p>{{$produk->deskripsi}}</p>
+
+                @endforeach
             </div>
         </div>
     </div>

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\DB;
 
-class GalleryController extends Controller
+class DocumentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +14,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $gallerys = \DB::table('gallerys')->get();
+        $documents = \DB::table('documents')->get();
 
-        return view('user/gallery', ['gallerys' => $gallerys]);
+        return view('user/document', ['documents' => $documents]);
     }
 
     /**

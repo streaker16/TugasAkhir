@@ -10,30 +10,16 @@
 
     <div class="container" id="news1">
         <div class="media position-relative">
-            <img src="img/laporan1.jpg" width="377px" height="213px" class="mr-3" alt="...">
+            @foreach ($news as $news)
+
+            <img src="img/news_gambar/{{$news->gambar}}" width="377px" height="213px" class="mr-3" alt="...">
             <div class="media-body">
-                <h5 class="mt-0">Media with stretched link</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                <h5 class="mt-0">{{$news->judul_berita}}</h5>
+                {{$news->deskripsi}}
             <a href="{{ url('/news/detailnews') }}"> Baca selengkapnya --></a>
             </div>
-        </div>
 
-        <div class="media position-relative">
-            <img src="img/laporan1.jpg" width="377px" height="213px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Media with stretched link</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                <a href="#" >Baca selengkapnya --></a>
-            </div>
-        </div>
-
-        <div class="media position-relative pb-5">
-            <img src="img/laporan1.jpg" width="377px" height="213px" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-0">Media with stretched link</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                <a href="#" >Baca selengkapnya --></a>
-            </div>
+            @endforeach
         </div>
     </div>
 

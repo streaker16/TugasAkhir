@@ -38,31 +38,24 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form"  method="POST" enctype="multipart/form-data" action="{{ url('admin/produk/upload')}}">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Name Produk</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter name">
+                    <label for="exampleInputEmail1">Nama Produk</label>
+                    <input required type="text" class="form-control" id="exampleInputEmail1" name="nama" placeholder="Masukkan Nama">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Description Produk</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Description">
+                    <label for="exampleInputEmail1">Kota</label>
+                    <input required type="text" class="form-control" id="exampleInputEmail1" name="kota" placeholder="Masukkan Nama">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                      </div>
-                    </div>
+                    <label for="exampleInputPassword1">Deskripsi Produk</label>
+                    <input  required type="text" class="form-control" id="exampleInputPassword1" name="deskripsi" placeholder="Deskripsi">
                   </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <div class="form-group">
+                    <label for="exampleInputFile">Masukkan File</label>
+                    <input required type="file" class="form-control" name="file" id="exampleInputFile">
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -90,52 +83,19 @@
             <table class="table">
             <thead>
                 <tr>
-                <th>File Name</th>
-                <th>File Size</th>
+                <th style="width: 15%">Nama</th>
+                <th style="width: 10%">Kota</th>
+                <th>Deskripsi</th>
                 <th></th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($produks as $produk)
 
                 <tr>
-                <td>Functional-requirements.docx</td>
-                <td>49.8005 kb</td>
-                <td class="text-right py-0 align-middle">
-                    <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                    </div>
-                </td>
-                <tr>
-                <td>UAT.pdf</td>
-                <td>28.4883 kb</td>
-                <td class="text-right py-0 align-middle">
-                    <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                    </div>
-                </td>
-                <tr>
-                <td>Email-from-flatbal.mln</td>
-                <td>57.9003 kb</td>
-                <td class="text-right py-0 align-middle">
-                    <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                    </div>
-                </td>
-                <tr>
-                <td>Logo.png</td>
-                <td>50.5190 kb</td>
-                <td class="text-right py-0 align-middle">
-                    <div class="btn-group btn-group-sm">
-                    <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                    <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
-                    </div>
-                </td>
-                <tr>
-                <td>Contract-10_12_2014.docx</td>
-                <td>44.9715 kb</td>
+                <td>{{$produk->nama}}</td>
+                <td>{{$produk->kota}}</td>
+                <td>{{$produk->deskripsi}}</td>
                 <td class="text-right py-0 align-middle">
                     <div class="btn-group btn-group-sm">
                     <a href="#" class="btn btn-info"><i class="fas fa-eye"></i></a>
@@ -143,6 +103,7 @@
                     </div>
                 </td>
 
+                @endforeach
             </tbody>
             </table>
         </div>

@@ -9,13 +9,17 @@
     </div>
 
     <div class="container" id="document1">
+        @foreach ($documents as $document)
+
         <div class="media position-relative align-baseline">
             <img src="img/pdf.svg" width="50px" class="mr-3 " alt="...">
             <div class="media-body">
-                <h5 class="mt-0 ">Media with stretched link</h5>
+                <h5 class="mt-0 ">{{$document->nama_file}}</h5>
             <a href="" class="btn btn-success float-right"> Download </a>
             </div>
         </div>
+
+        @endforeach
         <div class="media position-relative align-baseline">
             <img src="img/pdf.svg" width="50px" class="mr-3 " alt="...">
             <div class="media-body">

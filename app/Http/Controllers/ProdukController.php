@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+class ProdukController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $gallerys = \DB::table('gallerys')->get();
+        $produks = \DB::table('produks')->get();
 
-        return view('user/gallery', ['gallerys' => $gallerys]);
+        return view('user/produk', ['produks' => $produks]);
     }
 
     /**
@@ -45,9 +45,11 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $produks = \DB::table('produks')->get();
+
+        return view('user/detailproduk', ['produks' => $produks]);
     }
 
     /**

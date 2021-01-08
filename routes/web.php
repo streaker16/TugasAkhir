@@ -17,38 +17,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', function () {
     return view('admin/content');
 });
-Route::get('/admin/gallery', function () {
-    return view('admin/gallery');
-});
-Route::get('/admin/produk', function () {
-    return view('admin/produk');
-});
-Route::get('/admin/news', function () {
-    return view('admin/news');
-});
-Route::get('/admin/document', function () {
-    return view('admin/document');
+
+Route::get('/admin/gallery', 'AdminGalleryController@index');
+Route::post('/admin/gallery/upload', 'AdminGalleryController@store');
+
+Route::get('/admin/produk', 'AdminProdukController@index');
+Route::post('/admin/produk/upload', 'AdminProdukController@store');
+
+Route::get('/admin/news', 'AdminNewsController@index');
+Route::post('/admin/news/upload', 'AdminNewsController@store');
+
+Route::get('/admin/document', 'AdminDocumentController@index');
+Route::post('/admin/document/upload', 'AdminDocumentController@store');
+
+Route::get('/admin/admin', function () {
+    return view('admin/admin');
 });
 
 
 
 // Route User
-Route::get('/', function () {
-    return view('user.home');
-});
 
-Route::get('/produk', function () {
-    return view('user.produk');
-});
-Route::get('/produk/detailproduk', function () {
-    return view('user.detailproduk');
-});
-Route::get('/document', function () {
-    return view('user.document');
-});
-
+Route::get('/', 'HomeController@index');
 Route::get('/about', 'PagesController@about');
-Route::get('/contact', 'PagesController@contact');
+Route::get('/produk', 'ProdukController@index');
+Route::get('/produk/detailproduk', 'ProdukController@show');
 Route::get('/news', 'NewsController@index');
 Route::get('/news/detailnews', 'NewsController@show');
+Route::get('/document', 'DocumentController@index');
 Route::get('/gallery', 'galleryController@index');
+Route::get('/contact', 'PagesController@contact');

@@ -39,30 +39,13 @@
 
     <div class="container-fluid" id="backgallery">
         <div class="row">
+            @foreach ($gallerys as $gallery)
+
             <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
+                <img src="img/gallery_gambar/{{$gallery->gambar}}" width="270" height="163">
             </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
-            <div class="col-sm-3 py-4">
-                <img src="img/laporan1.jpg" width="270" height="163">
-            </div>
+
+            @endforeach
         </div>
     </div>
 

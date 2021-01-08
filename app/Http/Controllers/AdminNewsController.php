@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GalleryController extends Controller
+use App\News;
+
+class AdminNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +15,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        $gallerys = \DB::table('gallerys')->get();
+        $news = \DB::table('news')->get();
 
-        return view('user/gallery', ['gallerys' => $gallerys]);
+        return view('admin/news', ['news' => $news]);
     }
 
     /**
@@ -36,7 +38,24 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $file = $request->file('file');
+
+        $news = 'img/news_gambar';
+
+        $file->move($news,$file->getClientOriginalName());
+
+        $judul_berita = $request->judul_berita;
+        $deskripsi = $request->deskripsi;
+        $gambar = $file->getClientOriginalName();
+
+        News::create([
+            'judul_berita' => $judul_berita,
+            'deskripsi' => $deskripsi,
+            'gambar' => $gambar,
+            'user_id' => 1,
+        ]);
+
+        return redirect()->back();
     }
 
     /**

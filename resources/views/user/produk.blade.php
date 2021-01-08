@@ -13,14 +13,19 @@
 <div class="container-fluid" id="produk-card">
     <div class="row produk-popular">
         <div class="col-sm-7 card-image">
-            <img src="img/produk/jagung.png" width="95%" height="95%">
+            @php
+                $total = count($produks);
+            @endphp
+            <img src="img/produk/{{$produks[$total-1]->gambar}}" width="95%" height="95%">
         </div>
         <div class="col-md">
             <div class="row desc-card">
                 <div class="col-9 produk-card">
-                    <p class="h3">Popular Produk</p>
-                    <p class="h1 mb-4">Jagung Bose</p>
-                    <p>Dalam bahasa setempat Bose artinya lunak. Jadi itu adalah makanan Khas daerah NTT, berupa jagung serta kacang-kacangan lainnya direbus kemudian ditambah sedikit pemanis seperti gula, dll</p>
+
+                    <p class="h3">New Produk</p>
+                    <p class="h1 mb-4">{{$produks[$total-1]->nama}}</p>
+                    <p>{{$produks[$total-1]->deskripsi}}</p>
+
                 </div>
             </div>
         </div>
@@ -50,52 +55,26 @@
             </div>
         </div>
         <div class="row img-produk">
+            @foreach ($produks as $produk)
+
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="img/produk/gambar2.png" class="card-img-top" alt="image Produk">
+                    <img src="img/produk/{{$produk->gambar}}" class="card-img-top" alt="image Produk">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h5 class="card-title">{{$produk->nama}}</h5>
+                      <p class="card-text">{{$produk->deskripsi}}</p>
                       <a href="{{ url('/produk/detailproduk') }}" class="btn">Visit Us</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="img/produk/gambar1.png" class="card-img-top" alt="image">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn">Visit Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="img/produk/gambar1.png" class="card-img-top" alt="image">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn">Visit Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card">
-                    <img src="img/produk/gambar1.png" class="card-img-top" alt="image">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn">Visit Us</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
 
             {{-- <a href="" class="btn btn-outline-warning "> Lainnya </a> --}}
 
-            <div class="row mx-auto my-5">
+            <div class="row my-5 mx-auto">
                 <div class="col-sm-12">
-                    <a href="" class="btn btn-outline-warning laporan-btn py-2">Lainnya</a>
+                    <a href="" class="btn btn-outline-warning produk-btn py-2">Lainnya</a>
                 </div>
             </div>
         </div>

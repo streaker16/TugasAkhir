@@ -8,42 +8,26 @@
         </div>
     </div>
 
-    {{-- laporan kegiatan --}}
+    {{-- NEWS --}}
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>Laporan kegiatan</h2>
+                <h2>NEWS</h2>
             </div>
         </div>
 
-        <div class="row justify-content-center home_laporan">
+        <div class="row justify-content-center home_news">
+            @foreach ($news as $news)
+
             <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>Distribusi Bibit ke Masyarakat</h3>
+                <img src="img/news_gambar/{{$news->gambar}}" width="347" height="220">
+                <h3>{{$news->judul_berita}}</h3>
             </div>
-            <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>Keberasilan membuat alat pemurnian air</h3>
-            </div>
-            <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>Keberangkatan KKn Mahasiswa UGM!</h3>
-            </div>
-            <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>Pameran Alat Teknologi Pertanian Mahasiswa UGM</h3>
-            </div>
-            <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>UGM Melepaskan 2225 Mahasiswa untuk KKN</h3>
-            </div>
-            <div class="col-sm-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-                <h3>Penanaman RKT PT.Janggala 2018/2019</h3>
-            </div>
+
+            @endforeach
         </div>
     </div>
-    {{-- end laporan kegiatan --}}
+    {{-- end news --}}
 
 
     {{-- produk --}}
@@ -55,25 +39,16 @@
         </div>
 
         <div class="row bg-kkn home_produk row-eror justify-content-center">
+            @foreach ($produks as $produk)
+
             <div class="col-sm-2">
-                <img src="img/produk/gambar1.png">
+                <img src="img/produk/{{$produk->gambar}}">
             </div>
-            <div class="col-sm-2">
-                <img src="img/produk/gambar2.png">
+
+            @endforeach
+            <div>
+                <a href="" class="btn btn-outline-warning home-btn mt-5"> See All Produk</a>
             </div>
-            <div class="col-sm-2">
-                <img src="img/produk/gambar3.png">
-            </div>
-            <div class="col-sm-2">
-                <img src="img/produk/gambar4.png">
-            </div>
-            <div class="col-sm-2">
-                <img src="img/produk/gambar5.png">
-            </div>
-            <div class="col-sm-2">
-                <img src="img/produk/gambar6.png">
-            </div>
-            <a href="" class="btn btn-outline-warning home-btn mt-5"> See All Produk</a>
         </div>
     </div>
     {{-- end produk --}}
@@ -88,25 +63,14 @@
             </div>
         </div>
 
-        <div class="row justify-content-center home_laporan">
+        <div class="row justify-content-center home_news">
+            @foreach ($gallerys as $gallery)
+
             <div class="col-sm-4 mb-4x">
-                <img src="img/laporan1.jpg" width="347" height="220">
+                <img src="img/gallery_gambar/{{$gallery->gambar}}" width="347" height="220">
             </div>
-            <div class="col-sm-4 mb-4 mx-1 ml-3">
-                <img src="img/laporan1.jpg" width="347" height="220">
-            </div>
-            <div class="col-sm-4 mb-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-            </div>
-            <div class="col-sm-4 mb-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-            </div>
-            <div class="col-sm-4 mb-4 mx-1 ml-3">
-                <img src="img/laporan1.jpg" width="347" height="220">
-            </div>
-            <div class="col-sm-4 mb-4">
-                <img src="img/laporan1.jpg" width="347" height="220">
-            </div>
+
+            @endforeach
         </div>
     </div>
     {{-- end galeri --}}

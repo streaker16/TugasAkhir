@@ -13,7 +13,9 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return view('user/news');
+        $news = \DB::table('news')->get();
+
+        return view('user/news', ['news' => $news]);
     }
 
     /**
@@ -45,7 +47,9 @@ class NewsController extends Controller
      */
     public function show()
     {
-        return view('user/detailnews');
+        $news = \DB::table('news')->get();
+
+        return view('user/detailnews', ['news' => $news]);
     }
 
     /**
