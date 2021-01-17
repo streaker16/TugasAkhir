@@ -11,28 +11,28 @@
     <div class="container-fluid" id="dgallery">
         <div class="row">
             <div class="col-sm-3">
-                <img src="img/gallery/gallery1.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery1.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery2.png" width="111%" height="111%" >
+                <img src="{{ asset('img/gallery/gallery2.png') }}" width="111%" height="111%" >
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery3.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery3.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery4.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery4.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery5.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery5.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery6.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery6.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery7.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery7.png') }}" width="111%" height="111%">
             </div>
             <div class="col-sm-3">
-                <img src="img/gallery/gallery8.png" width="111%" height="111%">
+                <img src="{{ asset('img/gallery/gallery8.png') }}" width="111%" height="111%">
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
             @foreach ($gallerys as $gallery)
 
             <div class="col-sm-3 py-4">
-                <img src="img/gallery_gambar/{{$gallery->gambar}}" width="270" height="163">
+                <img src="{{ asset('img/gallery_gambar') }}/{{$gallery->gambar}}" width="270" height="163">
             </div>
 
             @endforeach

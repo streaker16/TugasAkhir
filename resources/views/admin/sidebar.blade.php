@@ -64,12 +64,17 @@
             </a>
           </li>
           <li class="nav-item">
+
+            @if (Auth::id() == 1)
+
             <a href="{{ url('admin/admin') }}" class="nav-link">
-              <i class="nav-icon far fa-user"></i>
-              <p>
-                Admin
-              </p>
+                <i class="nav-icon far fa-user"></i>
+                <p>
+                    List User
+                </p>
             </a>
+
+            @endif
           </li>
         </ul>
       </nav>

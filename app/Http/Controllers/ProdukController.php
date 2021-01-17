@@ -45,9 +45,9 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $produks = \DB::table('produks')->get();
+        $produks = \DB::table('produks')->where('id', $id)->first();
 
         return view('user/detailproduk', ['produks' => $produks]);
     }

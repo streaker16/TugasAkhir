@@ -12,11 +12,11 @@
         <div class="media position-relative">
             @foreach ($news as $news)
 
-            <img src="img/news_gambar/{{$news->gambar}}" width="377px" height="213px" class="mr-3" alt="...">
+            <img src="{{ asset('img/news_gambar') }}/{{$news->gambar}}" width="377px" height="213px" class="mr-3" alt="...">
             <div class="media-body">
                 <h5 class="mt-0">{{$news->judul_berita}}</h5>
                 {{$news->deskripsi}}
-            <a href="{{ url('/news/detailnews') }}"> Baca selengkapnya --></a>
+            <a href="{{ url('/news/'.$news->id.'/detailnews') }}"> Baca selengkapnya --></a>
             </div>
 
             @endforeach

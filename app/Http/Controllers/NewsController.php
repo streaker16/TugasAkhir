@@ -45,9 +45,10 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $news = \DB::table('news')->get();
+        // $news = \DB::table('news')->get();
+        $news = \DB::table('news')->where('id', $id)->first();
 
         return view('user/detailnews', ['news' => $news]);
     }

@@ -16,7 +16,7 @@
             @php
                 $total = count($produks);
             @endphp
-            <img src="img/produk/{{$produks[$total-1]->gambar}}" width="95%" height="95%">
+            <img src="{{ asset('img/produk')}}/{{$produks[$total-1]->gambar}}" width="95%" height="95%">
         </div>
         <div class="col-md">
             <div class="row desc-card">
@@ -59,11 +59,11 @@
 
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="img/produk/{{$produk->gambar}}" class="card-img-top" alt="image Produk">
+                    <img src="{{ asset('img/produk')}}/{{$produk->gambar}}" class="card-img-top" alt="image Produk">
                     <div class="card-body">
                       <h5 class="card-title">{{$produk->nama}}</h5>
                       <p class="card-text">{{$produk->deskripsi}}</p>
-                      <a href="{{ url('/produk/detailproduk') }}" class="btn">Visit Us</a>
+                      <a href="{{ url('/produk/'.$produk->id.'/detailproduk') }}" class="btn">Visit Us</a>
                     </div>
                 </div>
             </div>

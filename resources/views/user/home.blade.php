@@ -20,7 +20,7 @@
             @foreach ($news as $news)
 
             <div class="col-sm-4">
-                <img src="img/news_gambar/{{$news->gambar}}" width="347" height="220">
+                <img src="{{ asset('img/news_gambar') }}/{{$news->gambar}}" width="347" height="220">
                 <h3>{{$news->judul_berita}}</h3>
             </div>
 
@@ -42,7 +42,7 @@
             @foreach ($produks as $produk)
 
             <div class="col-sm-2">
-                <img src="img/produk/{{$produk->gambar}}">
+                <img src="{{ asset('img/produk') }}/{{$produk->gambar}}">
             </div>
 
             @endforeach
@@ -67,7 +67,7 @@
             @foreach ($gallerys as $gallery)
 
             <div class="col-sm-4 mb-4x">
-                <img src="img/gallery_gambar/{{$gallery->gambar}}" width="347" height="220">
+                <img src="{{ asset('img/gallery_gambar') }}/{{$gallery->gambar}}" width="347" height="220">
             </div>
 
             @endforeach

@@ -27,7 +27,7 @@ class AdminNewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/newstambah');
     }
 
     /**
@@ -42,11 +42,11 @@ class AdminNewsController extends Controller
 
         $news = 'img/news_gambar';
 
-        $file->move($news,$file->getClientOriginalName());
+        $file->move($news,time().'_'.$file->getClientOriginalName());
 
+        $gambar = time().'_'.$file->getClientOriginalName();
         $judul_berita = $request->judul_berita;
         $deskripsi = $request->deskripsi;
-        $gambar = $file->getClientOriginalName();
 
         News::create([
             'judul_berita' => $judul_berita,
@@ -55,7 +55,7 @@ class AdminNewsController extends Controller
             'user_id' => 1,
         ]);
 
-        return redirect()->back();
+        return redirect('admin/news')->with('sukses','Data Berhasul Dibuat!');
     }
 
     /**
@@ -100,6 +100,8 @@ class AdminNewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $news = News::find($id);
+        $news->delete();
+        return redirect('admin/news')->with('sukses','Data Berhasil Dihapus!');
     }
 }

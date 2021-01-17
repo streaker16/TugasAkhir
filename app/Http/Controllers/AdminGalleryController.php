@@ -27,7 +27,7 @@ class AdminGalleryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/gallerytambah');
     }
 
     /**
@@ -42,16 +42,16 @@ class AdminGalleryController extends Controller
 
         $gallery = 'img/gallery_gambar';
 
-        $file->move($gallery,$file->getClientOriginalName());
+        $file->move($gallery,time().'_'.$file->getClientOriginalName());
 
-        $nama_file = $file->getClientOriginalName();
+        $nama_file = time().'_'.$file->getClientOriginalName();
 
         Gallery::create([
             'gambar' => $nama_file,
             'user_id' => 1,
         ]);
 
-        return redirect()->back();
+        return redirect('admin/gallery')->with('sukses','Data Berhasil Dibuat!');
     }
 
     /**
@@ -96,6 +96,8 @@ class AdminGalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $gallery = Gallery::find($id);
+        $gallery->delete();
+        return redirect('admin/gallery')->with('sukses','Data Berhasil Dihapus!');
     }
 }

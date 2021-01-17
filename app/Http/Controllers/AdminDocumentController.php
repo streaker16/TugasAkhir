@@ -27,7 +27,7 @@ class AdminDocumentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/documenttambah');
     }
 
     /**
@@ -43,9 +43,9 @@ class AdminDocumentController extends Controller
 
         $document = 'file_dokumen';
 
-        $file->move($document,$file->getClientOriginalName());
+        $file->move($document,time().'_'.$file->getClientOriginalName());
 
-        $nama_file = $file->getClientOriginalName();
+        $nama_file = time().'_'.$file->getClientOriginalName();
 
         Document::create([
             'nama_file' => $nama_file,
@@ -53,7 +53,7 @@ class AdminDocumentController extends Controller
             'user_id' => 1,
         ]);
 
-        return redirect()->back();
+        return redirect('admin/document')->with('sukses','Data Berhasil Dibuat!');
     }
 
     /**
@@ -98,6 +98,8 @@ class AdminDocumentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $document = Document::find($id);
+        $document->delete();
+        return redirect('admin/document')->with('sukses','Data Berhasil Dihapus!');
     }
 }

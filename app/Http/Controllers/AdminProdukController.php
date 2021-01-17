@@ -27,7 +27,7 @@ class AdminProdukController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/produktambah');
     }
 
     /**
@@ -40,12 +40,12 @@ class AdminProdukController extends Controller
     {
         $file = $request->file('file');
 
-        $file->move('img/produk',$file->getClientOriginalName());
+        $file->move('img/produk',time().'_'.$file->getClientOriginalName());
 
+        $gambar = time().'_'.$file->getClientOriginalName();
         $nama = $request->nama;
         $kota = $request->kota;
         $deskripsi = $request->deskripsi;
-        $gambar = $file->getClientOriginalName();
 
         Produk::create([
             'nama' => $nama,
@@ -55,7 +55,7 @@ class AdminProdukController extends Controller
             'user_id' => 1,
         ]);
 
-        return redirect()->back();
+        return redirect('admin/produk')->with('sukses','Data Berhasil Dibuat!');
     }
 
     /**
@@ -100,6 +100,8 @@ class AdminProdukController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produk = Produk::find($id);
+        $produk->delete();
+        return redirect('admin/produk')->with('sukses','Data Berhasil Dihapus!');
     }
 }

@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('status', ['aktif', 'non-aktif']);
             $table->enum('role', ['admin', 'mahasiswa']);
+            $table->foreignId('id_kelompok')->references('id')->on('kelompoks');
             $table->timestamps();
         });
     }
