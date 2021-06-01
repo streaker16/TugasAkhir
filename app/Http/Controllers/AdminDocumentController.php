@@ -3,10 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 use App\Document;
 
 class AdminDocumentController extends Controller
@@ -16,7 +12,6 @@ class AdminDocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
@@ -36,11 +31,6 @@ class AdminDocumentController extends Controller
         }else {
             $documents = \DB::table('documents')->where('user_id',\Session::get('id'))->orderBy('id','desc')->paginate(5);
         }
-=======
-    public function index()
-    {
-        $documents = \DB::table('documents')->get();
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
         return view('admin/document', ['documents' => $documents]);
     }
@@ -63,7 +53,6 @@ class AdminDocumentController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
         $this->validate($request, [
             'file' => 'required|file|mimes:pdf|max:10000',
         ]);
@@ -74,25 +63,12 @@ class AdminDocumentController extends Controller
         $id = \Session::get('id');
 
         $file->move($document,time().'_'.$file->getClientOriginalName());
-=======
-        $file = $request->file('file');
-        $size_file =  $file->getSize();
-
-        $document = 'file_dokumen';
-
-        $file->move($document,time().'_'.$file->getClientOriginalName());
-
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         $nama_file = time().'_'.$file->getClientOriginalName();
 
         Document::create([
             'nama_file' => $nama_file,
             'size_file' => $size_file,
-<<<<<<< HEAD
             'user_id' => $id,
-=======
-            'user_id' => 1,
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         ]);
 
         return redirect('admin/document')->with('sukses','Data Berhasil Dibuat!');
@@ -104,10 +80,6 @@ class AdminDocumentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
-
-=======
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     public function show($id)
     {
         //
@@ -145,13 +117,9 @@ class AdminDocumentController extends Controller
     public function destroy($id)
     {
         $document = Document::find($id);
-<<<<<<< HEAD
         unlink('file_dokumen/'.$document->nama_file);
         $document->delete();
 
-=======
-        $document->delete();
->>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         return redirect('admin/document')->with('sukses','Data Berhasil Dihapus!');
     }
 }
