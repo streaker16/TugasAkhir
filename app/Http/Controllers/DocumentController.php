@@ -14,6 +14,7 @@ class DocumentController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $documents = \DB::table('documents')->orderBy('id','desc')->paginate(4);
         $provinsis = \DB::table('provinsis')->orderby('nama', 'asc')->get();
         $kabupatens = \DB::table('kabupatens')->get();
@@ -34,6 +35,11 @@ class DocumentController extends Controller
             'desas'=> $desas,
             'kelompoks' => $kelompoks
             ]);
+=======
+        $documents = \DB::table('documents')->get();
+
+        return view('user/document', ['documents' => $documents]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**

@@ -13,6 +13,7 @@ class NewsController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $news = \DB::table('news')->orderBy('id', 'desc')->limit(4)->get();
         $provinsis = \DB::table('provinsis')->orderby('nama', 'asc')->get();
         $kabupatens = \DB::table('kabupatens')->get();
@@ -58,6 +59,13 @@ class NewsController extends Controller
             'kelompoks' => $kelompoks
             ]);
     }
+=======
+        $news = \DB::table('news')->get();
+
+        return view('user/news', ['news' => $news]);
+    }
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     /**
      * Show the form for creating a new resource.
      *
@@ -89,6 +97,7 @@ class NewsController extends Controller
     {
         // $news = \DB::table('news')->get();
         $news = \DB::table('news')->where('id', $id)->first();
+<<<<<<< HEAD
         $newslainnya = \DB::table('news')
         ->where('id', '!=', $id)
         ->limit(5)
@@ -116,6 +125,10 @@ class NewsController extends Controller
             'desas'=> $desas,
             'kelompoks' => $kelompoks
             ]);
+=======
+
+        return view('user/detailnews', ['news' => $news]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**

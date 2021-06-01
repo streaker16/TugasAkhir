@@ -13,6 +13,7 @@ class AdminGalleryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
 
     // supaya tidak bisa diakses tanpa login
     public function __construct()
@@ -35,6 +36,12 @@ class AdminGalleryController extends Controller
         }else {
             $gallerys = \DB::table('gallerys')->where('user_id',\Session::get('id'))->orderBy('id','desc')->paginate(5);
         }
+=======
+    public function index()
+    {
+        $gallerys = \DB::table('gallerys')->get();
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         return view('admin/gallery', ['gallerys' => $gallerys]);
     }
 
@@ -56,6 +63,7 @@ class AdminGalleryController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'file' => 'required|file|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
@@ -66,11 +74,23 @@ class AdminGalleryController extends Controller
         $id = \Session::get('id');
 
         $file->move($gallery,time().'_'.$file->getClientOriginalName());
+=======
+        $file = $request->file('file');
+
+        $gallery = 'img/gallery_gambar';
+
+        $file->move($gallery,time().'_'.$file->getClientOriginalName());
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         $nama_file = time().'_'.$file->getClientOriginalName();
 
         Gallery::create([
             'gambar' => $nama_file,
+<<<<<<< HEAD
             'user_id' => $id,
+=======
+            'user_id' => 1,
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         ]);
 
         return redirect('admin/gallery')->with('sukses','Data Berhasil Dibuat!');
@@ -119,9 +139,13 @@ class AdminGalleryController extends Controller
     public function destroy($id)
     {
         $gallery = Gallery::find($id);
+<<<<<<< HEAD
         unlink('img/gallery_gambar/'.$gallery->gambar);
         $gallery->delete();
 
+=======
+        $gallery->delete();
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         return redirect('admin/gallery')->with('sukses','Data Berhasil Dihapus!');
     }
 }

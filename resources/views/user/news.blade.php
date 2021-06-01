@@ -4,6 +4,7 @@
 
     <div class="jumbotron jumbotron-fluid" id="news">
       <div class="container">
+<<<<<<< HEAD
           @section('title', 'Berita')
         <h1 class="display-4">Berita</h1>
       </div>
@@ -27,12 +28,35 @@
             </div>
             @endforeach
 
+=======
+        <h1 class="display-4">News</h1>
+      </div>
+    </div>
+
+    <div class="container" id="news1">
+        <div class="media position-relative">
+            @foreach ($news as $news)
+
+            <img src="{{ asset('img/news_gambar') }}/{{$news->gambar}}" width="377px" height="213px" class="mr-3" alt="...">
+            <div class="media-body">
+                <h5 class="mt-0">{{$news->judul_berita}}</h5>
+                {{$news->deskripsi}}
+            <a href="{{ url('/news/'.$news->id.'/detailnews') }}"> Baca selengkapnya --></a>
+            </div>
+
+            @endforeach
+        </div>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     </div>
 
     <div class="container">
         <div class="row justify-content-center my-5">
             <div class="col-sm-1">
+<<<<<<< HEAD
                 <a href="/news/newslainnya" class="btn btn-outline-warning news-btn py-2">Lainnya</a>
+=======
+                <a href="" class="btn btn-outline-warning news-btn py-2">Lainnya</a>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
             </div>
         </div>
     </div>

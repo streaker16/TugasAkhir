@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 Use App\News;
 Use App\Produk;
 Use App\Gallery;
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 class HomeController extends Controller
 {
@@ -16,6 +19,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $news = News::limit(6)->orderBy('id', 'desc')->get();
         $produks = Produk::limit(6)->orderBy('id', 'desc')->get();
         $gallerys = Gallery::limit(6)->orderBy('id', 'desc')->get();
@@ -40,6 +44,14 @@ class HomeController extends Controller
             'desas'=> $desas,
             'kelompoks'=> $kelompoks,
             ]);
+=======
+
+        $news = \DB::table('news')->get();
+        $produks = \DB::table('produks')->get();
+        $gallerys = \DB::table('gallerys')->get();
+
+        return view('user/home', ['news' => $news, 'produks' => $produks, 'gallerys' => $gallerys]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**

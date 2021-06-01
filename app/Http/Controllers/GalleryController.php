@@ -13,6 +13,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $gallerys = \DB::table('gallerys')->orderBy('id', 'desc')->paginate(8);
         $provinsis = \DB::table('provinsis')->orderby('nama', 'asc')->get();
         $kabupatens = \DB::table('kabupatens')->get();
@@ -33,6 +34,11 @@ class GalleryController extends Controller
             'desas'=> $desas,
             'kelompoks' => $kelompoks
             ]);
+=======
+        $gallerys = \DB::table('gallerys')->get();
+
+        return view('user/gallery', ['gallerys' => $gallerys]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**

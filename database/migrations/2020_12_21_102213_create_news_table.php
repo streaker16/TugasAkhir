@@ -17,7 +17,11 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string('judul_berita');
             $table->string('gambar');
+<<<<<<< HEAD
             $table->text('deskripsi');
+=======
+            $table->string('deskripsi');
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
             $table->foreignId('user_id')->references('id')->on('users');
             $table->timestamps();
         });

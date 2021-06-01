@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 use App\Produk;
 
 class AdminProdukController extends Controller
@@ -12,6 +16,7 @@ class AdminProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware(function ($request, $next) {
@@ -31,6 +36,11 @@ class AdminProdukController extends Controller
         }else{
             $produks = \DB::table('produks')->where('user_id',\Session::get('id'))->orderBy('id','desc')->paginate(4);
         }
+=======
+    public function index()
+    {
+        $produks = \DB::table('produks')->get();
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
         return view('admin/produk', ['produks' => $produks]);
     }
@@ -53,15 +63,21 @@ class AdminProdukController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'file' => 'required|file|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
 
         $file = $request->file('file');
+=======
+        $file = $request->file('file');
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         $file->move('img/produk',time().'_'.$file->getClientOriginalName());
 
         $gambar = time().'_'.$file->getClientOriginalName();
         $nama = $request->nama;
+<<<<<<< HEAD
         $deskripsi = $request->deskripsi;
         $id = \Session::get('id');
 
@@ -70,6 +86,17 @@ class AdminProdukController extends Controller
             'deskripsi' => $deskripsi,
             'gambar' => $gambar,
             'user_id' => $id,
+=======
+        $kota = $request->kota;
+        $deskripsi = $request->deskripsi;
+
+        Produk::create([
+            'nama' => $nama,
+            'kota' => $kota,
+            'deskripsi' => $deskripsi,
+            'gambar' => $gambar,
+            'user_id' => 1,
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         ]);
 
         return redirect('admin/produk')->with('sukses','Data Berhasil Dibuat!');
@@ -94,9 +121,13 @@ class AdminProdukController extends Controller
      */
     public function edit($id)
     {
+<<<<<<< HEAD
         $produks = Produk::find($id);
 
         return view('admin/produkedit', ['produks' => $produks]);
+=======
+        //
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**
@@ -108,6 +139,7 @@ class AdminProdukController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
         $this->validate($request, [
             'file' => 'file|image|mimes:jpeg,png,jpg,svg|max:2048',
         ]);
@@ -133,6 +165,9 @@ class AdminProdukController extends Controller
         $produks->save();
 
         return redirect('admin/produk')->with('sukses','Data Berhasil Diupdate!');
+=======
+        //
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**
@@ -144,9 +179,13 @@ class AdminProdukController extends Controller
     public function destroy($id)
     {
         $produk = Produk::find($id);
+<<<<<<< HEAD
         unlink('img/produk/'.$produk->gambar);
         $produk->delete();
 
+=======
+        $produk->delete();
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         return redirect('admin/produk')->with('sukses','Data Berhasil Dihapus!');
     }
 }

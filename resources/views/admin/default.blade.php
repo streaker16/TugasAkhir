@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
   <title>KKN UGM - @yield('judul')</title>
+=======
+  <title>AdminLTE 3 | Dashboard</title>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->

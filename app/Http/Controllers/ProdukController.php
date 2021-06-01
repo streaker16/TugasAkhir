@@ -13,6 +13,7 @@ class ProdukController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $produks = \DB::table('produks')->limit(4)->orderBy('id', 'desc')->get();
         $newproduks = \DB::table('produks')->orderBy('id', 'desc')->get();
         $provinsis = \DB::table('provinsis')->orderby('nama', 'asc')->get();
@@ -35,6 +36,11 @@ class ProdukController extends Controller
             'desas'=> $desas,
             'kelompoks' => $kelompoks
             ]);
+=======
+        $produks = \DB::table('produks')->get();
+
+        return view('user/produk', ['produks' => $produks]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**
@@ -42,6 +48,7 @@ class ProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function filter($id)
     {
         $provinsis = \DB::table('provinsis')->orderby('nama', 'asc')->get();
@@ -134,6 +141,8 @@ class ProdukController extends Controller
         ]);
     }
 
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     public function create()
     {
         //
@@ -158,6 +167,7 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
         $produks = \DB::table('produks')
         ->select('produks.*', 'provinsis.id AS id_provinsi')
         ->join('users', 'users.id', '=', 'produks.user_id')
@@ -203,6 +213,11 @@ class ProdukController extends Controller
             'desas'=> $desas,
             'kelompoks' => $kelompoks
             ]);
+=======
+        $produks = \DB::table('produks')->where('id', $id)->first();
+
+        return view('user/detailproduk', ['produks' => $produks]);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     }
 
     /**

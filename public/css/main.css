@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 html,body
 {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 /* my color class */
 .bg-kkn{
     background-color: #073C64 !important;
@@ -103,6 +106,7 @@ html,body
     margin: auto;
     margin-top: 20px;
 }
+<<<<<<< HEAD
 .modal-content{
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 1s;
@@ -134,6 +138,8 @@ html,body
     text-decoration: none;
     background-color: transparent;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 /* home news */
 .container h2{
@@ -164,7 +170,11 @@ h3 {
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
+<<<<<<< HEAD
     font-size: 21px;
+=======
+    font-size: 27px;
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     margin-left: -5px;
     margin-top: 5px;
 }
@@ -198,11 +208,19 @@ h3 {
     margin-top: -30px;
 }
 
+<<<<<<< HEAD
 /* .home_produk img{
     border-radius: 23px;
     width: 175px;
     height: 175px;
 } */
+=======
+.home_produk img{
+    border-radius: 23px;
+    max-width: 175px;
+    max-height: 175px;
+}
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 .home-btn {
     border: 2px solid;
@@ -211,6 +229,11 @@ h3 {
     border-color: #FFB200;
     padding-left: 40px;
     padding-right: 40px;
+<<<<<<< HEAD
+=======
+    margin-bottom: -40px;
+    text-align: center;
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 }
 /* end home produk */
 
@@ -340,7 +363,11 @@ h3 {
     margin-left: -120px;
     background-color: white;
     margin-top: 100px;
+<<<<<<< HEAD
     box-shadow: 0 17px 15px rgba(0, 0, 0, 0.3);
+=======
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 }
 .produk-card{
     padding: 35px;
@@ -369,10 +396,13 @@ h3 {
     text-transform: uppercase;
     text-align: center;
 }
+<<<<<<< HEAD
 .scroll{
     height: 200px;
     overflow-y: scroll;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 .btn-produk button.dropdown-toggle::after{
     margin-left: 50px;
 }
@@ -380,12 +410,17 @@ h3 {
     border-radius: 20px;
     background-color: rgb(180, 180, 180);
 }
+<<<<<<< HEAD
 .produk{
+=======
+.img-produk{
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     margin-top: 20px;
 }
 .img-produk .card{
     border-radius: 20px;
 }
+<<<<<<< HEAD
 .img-produk .card-img-top{
     height:218px;
     border-top-left-radius: 20px;
@@ -393,6 +428,11 @@ h3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+=======
+.img-produk img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 }
 
 /* end produk */
@@ -414,6 +454,7 @@ h3 {
     text-align: justify;
     line-height: 20px;
 }
+<<<<<<< HEAD
 #dproduk .pr-5 div{
     height:500px;
     border-radius: 5px;
@@ -421,6 +462,8 @@ h3 {
     background-repeat: no-repeat;
     background-position: center;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 .list-produk-lainnya{
     background-color: rgb(243, 243, 243);
     margin-bottom: 30px;
@@ -501,7 +544,11 @@ h3 {
 
 /* Document */
 #document{
+<<<<<<< HEAD
     background-image: url(../img/document.jpg);
+=======
+    background-image: url(../img/pdf.svg);
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 }
 #document h5{
     font-size: 20px;
@@ -543,6 +590,7 @@ h3 {
     font-size: 35px;
     color: #FFFFFF;
 }
+<<<<<<< HEAD
 #contact-section-page {
     background-color: #073C64;
     font-family: Roboto;
@@ -551,6 +599,8 @@ h3 {
     font-size: 35px;
     color: #FFFFFF;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 .contact .col-sm-8{
     padding: 90px 0;
@@ -565,6 +615,7 @@ h3 {
     line-height: 44px;
     color: #FFB200;
 }
+<<<<<<< HEAD
 #contact-section-page .text-right{
     font-family: Biryani;
     font-style: normal;
@@ -573,6 +624,8 @@ h3 {
     line-height: 44px;
     color: #FFB200;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 #contact-section .pl-1{
     font-family: Quicksand;
@@ -583,6 +636,7 @@ h3 {
     color: #FFFFFF;
     margin-top: -10px;
 }
+<<<<<<< HEAD
 #contact-section-page .pl-1{
     font-family: Quicksand;
     font-style: normal;
@@ -592,20 +646,28 @@ h3 {
     color: #FFFFFF;
     margin-top: -10px;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 #contact-section .pl-1 a{
     color: white;
 }
+<<<<<<< HEAD
 #contact-section-page .pl-1 a{
     color: white;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 #contact-section .text-right{
     margin-top: -10px;
 }
+<<<<<<< HEAD
 #contact-section-page .text-right{
     margin-top: -10px;
 }
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 /* end contact */
 
 /* DESKTOP VERSION */

@@ -4,8 +4,12 @@
 
     <div class="jumbotron jumbotron-fluid" id="aboutus">
         <div class="container">
+<<<<<<< HEAD
             @section('title', 'Tentang')
             <h1 class="display-4">Tentang</h1>
+=======
+            <h1 class="display-4">About Us</h1>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         </div>
     </div>
 

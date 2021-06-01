@@ -4,7 +4,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
     <meta name="csrf-token" content="{{ csrf_token() }}">
+=======
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -22,10 +25,18 @@
     {{-- My CSS --}}
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
+<<<<<<< HEAD
     <title>KKN UGM - @yield('title')</title>
   </head>
 
   <body>
+=======
+    <title>KKN UGM</title>
+  </head>
+
+  <body>
+
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
     <header class="py-1">
         <div class="container">
             <div class="row">
@@ -52,6 +63,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
+<<<<<<< HEAD
                     <a class="nav-item nav-link active" href="{{ url('/') }}">Beranda</a>
                     <a class="nav-item nav-link" href="{{ url('/about') }}">Tentang</a>
                     <a class="nav-item nav-link" href="{{ url('/produk') }}">Produk</a>
@@ -70,10 +82,22 @@
                     <a class="nav-item btn btn-primary tombol" data-toggle="modal" data-target="#modal">Masuk</a>
 
                     @endif
+=======
+                    <a class="nav-item nav-link active" href="{{ url('/') }}">Home</a>
+                    <a class="nav-item nav-link" href="{{ url('/about') }}">About</a>
+                    <a class="nav-item nav-link" href="{{ url('/produk') }}">Produk</a>
+                    <a class="nav-item nav-link" href="{{ url('/news') }}">News</a>
+                    <a class="nav-item nav-link" href="{{ url('/document') }}">Document</a>
+                    <a class="nav-item nav-link" href="{{ url('/gallery') }}">Gallery</a>
+                    <a class="nav-item nav-link" href="{{ url('/contact') }}">Contact</a>
+                    <!-- Button trigger modal -->
+                    <a class="nav-item btn btn-primary tombol" data-toggle="modal" data-target="#exampleModal">Join Us</a>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                 </div>
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
 
     <!-- Modal -->
     <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
@@ -88,11 +112,19 @@
                       <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false"><h5>REGISTER</h5></a>
                     </li>
                 </ul>
+=======
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header border-0">
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
+<<<<<<< HEAD
 
                   <div class="tab-content" id="myTabContent">
 
@@ -123,10 +155,46 @@
                                 </small>
                             </div>
 
+=======
+                <style>
+                    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+                        color: #495057 !important;
+                        background-color: #fff;
+                        border-color: #dee2e6 #dee2e6 #fff;
+                    }
+                    .nav-item a{
+                        color: #007bff !important;
+                        text-decoration: none;
+                        background-color: transparent;
+                    }
+                </style>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">LOGIN</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">REGISTER</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <form action="/postlogin" method="POST">
+                            @csrf
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email</label>
+                              <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
 
+<<<<<<< HEAD
                     {{-- Register --}}
                     <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
                         <form action="{{ url('/postregister')}}" method="POST" enctype="multipart/form-data">
@@ -277,11 +345,35 @@
                             </div>
 
                             <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+=======
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                         </form>
                     </div>
                   </div>
 
             </div>
+<<<<<<< HEAD
+=======
+            <div class="modal-footer">
+
+            </div>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
         </div>
         </div>
     </div>
@@ -292,7 +384,11 @@
     <div class="container-fluid" id="contact-section">
         <div class="row py-3">
             <div class="col-sm-12">
+<<<<<<< HEAD
                 <h2 class="text-center py-3">Kontak Kami</h2>
+=======
+                <h2 class="text-center py-3">Contact Us</h2>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                 <dl class="row ">
                     <dt class="col-6 text-right">Email :</dt>
                     <dd class="col-6 pl-1 pt-2">kknreal@ugm.ac.id</dd>
@@ -305,12 +401,21 @@
 
     <nav class="navbar navbar-expand-sm" id="footer">
         <div class="container px-5 ">
+<<<<<<< HEAD
             <img src="{{ asset('img/logofooter.png') }}" width="9%" height="9%">
             <p> &copy; copyright 2020 | dibuat dengan <i class="fas fa-heart"></i> oleh KKN UGM</p>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" href="{{ url('/about') }}">Tentang</a>
                     <a class="nav-item nav-link active" href="{{ url('/') }}">Halaman Beranda</a>
+=======
+            <img src="../img/logofooter.png" width="9%" height="9%">
+            <p> &copy; copyright 2020 | build with <i class="fas fa-heart"></i> by. KKN UGM</p>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="{{ url('/about') }}">About</a>
+                    <a class="nav-item nav-link active" href="{{ url('/') }}">Homepage</a>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
                     <a class="nav-item nav-link" href="{{ url('/produk') }}">Produk</a>
                 </div>
             </div>
@@ -319,6 +424,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -406,5 +512,10 @@
             });
         });
     </script>
+=======
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
   </body>
 </html>

@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+=======
+use Illuminate\Http\Request;
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 
 class AuthController extends Controller
 {
@@ -15,6 +19,7 @@ class AuthController extends Controller
 
     public function postlogin(Request $request)
     {
+<<<<<<< HEAD
         $check = User::where('email',$request->email)->first();
         if($check){
             if ($check->status == 'belum-aktif') {
@@ -120,4 +125,8 @@ class AuthController extends Controller
         return redirect('/');
     }
 
+=======
+        dd($request->all());
+    }
+>>>>>>> 2d98f4752130489725150b0380c0e1486ffe49f4
 }
